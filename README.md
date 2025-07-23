@@ -32,3 +32,12 @@ Network : Unlike installations in production environment, all the components in 
 Volume : Only one directory in the filesytem is to be mounted as a volume where each components will have own subdirectories. Volume name is "devenv-volume"
 
 Monitoring...
+
+
+
+Building and composing images
+docker-compose up --d
+
+Stopping container : docker-compose stop
+
+These methods should be run under the same directory of composition file.

@@ -45,11 +45,22 @@ services:
       PGADMIN_DEFAULT_PASSWORD: secret
     volumes:
       - pgadmin-data:/var/lib/pgadmin    
+  mongodb:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb-storage:/data/db 
 volumes:
   prometheus-storage:
   grafana-storage:
   postgre-storage:
   pgadmin-data:
+  mongodb-storage:
 networks:
   devnetwork:
     external: false

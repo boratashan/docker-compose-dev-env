@@ -44,7 +44,8 @@ services:
       PGADMIN_DEFAULT_EMAIL: user@domain.com
       PGADMIN_DEFAULT_PASSWORD: secret
     volumes:
-      - pgadmin-data:/var/lib/pgadmin    
+      - pgadmin-data:/var/lib/pgadmin
+          
   mongodb:
     image: mongo
     restart: always
